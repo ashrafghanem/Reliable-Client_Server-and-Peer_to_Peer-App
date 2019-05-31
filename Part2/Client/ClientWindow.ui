@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientWindow</class>
+ <widget class="QMainWindow" name="ClientWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>713</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>713</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Client</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="LoginBtn">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>192</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Marker</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="chatBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>19</y>
+      <width>311</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Marker</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="serverIP">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>62</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Server IP</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="serverPort">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>88</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Server Port</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>62</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TCP Server IP:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>88</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TCP Server Port:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="srcIP">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>132</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Local IP</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="srcPort">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>158</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Local Port</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dstIP">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>262</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Remote IP</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dstPort">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>292</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Remote Port</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>134</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Local IP:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>160</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Local Port:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>262</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Remote IP:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>292</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Remote Port:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusLbl">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>433</y>
+      <width>41</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Status:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>554</x>
+      <y>-1</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string> Online Users:</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="onlineUsers">
+    <property name="geometry">
+     <rect>
+      <x>554</x>
+      <y>20</y>
+      <width>151</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>338</x>
+      <y>232</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>24</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Username:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Username">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>20</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sendFileBtn">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>337</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Send File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectFile">
+    <property name="geometry">
+     <rect>
+      <x>333</x>
+      <y>337</y>
+      <width>100</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="status">
+    <property name="geometry">
+     <rect>
+      <x>58</x>
+      <y>433</y>
+      <width>451</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="error">
+    <property name="geometry">
+     <rect>
+      <x>489</x>
+      <y>404</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>557</x>
+      <y>379</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Total Chunks:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>558</x>
+      <y>424</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Chunks Resent:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="totalChunksLbl">
+    <property name="geometry">
+     <rect>
+      <x>651</x>
+      <y>379</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chunksResentLbl">
+    <property name="geometry">
+     <rect>
+      <x>651</x>
+      <y>424</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>434</x>
+      <y>404</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Error(%) </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>558</x>
+      <y>401</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Chunks Sent:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chunksSentLbl">
+    <property name="geometry">
+     <rect>
+      <x>651</x>
+      <y>402</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>317</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="msgBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>381</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Marker</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Type Your Message Here!</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>Username</tabstop>
+  <tabstop>serverIP</tabstop>
+  <tabstop>serverPort</tabstop>
+  <tabstop>srcIP</tabstop>
+  <tabstop>srcPort</tabstop>
+  <tabstop>LoginBtn</tabstop>
+  <tabstop>dstIP</tabstop>
+  <tabstop>dstPort</tabstop>
+  <tabstop>onlineUsers</tabstop>
+  <tabstop>sendFileBtn</tabstop>
+  <tabstop>selectFile</tabstop>
+  <tabstop>error</tabstop>
+  <tabstop>msgBox</tabstop>
+  <tabstop>chatBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
